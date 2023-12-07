@@ -1,4 +1,4 @@
-part of '../home_page.dart';
+part of '../home_page_family.dart';
 
 class HomeBottomBarComponent extends StatelessWidget {
   const HomeBottomBarComponent({super.key});

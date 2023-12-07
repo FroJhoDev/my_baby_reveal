@@ -1,4 +1,4 @@
-part of '../home_page.dart';
+part of '../home_page_family.dart';
 
 class HomeErrorMessageComponent extends StatelessWidget {
   const HomeErrorMessageComponent({super.key});

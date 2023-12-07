@@ -15,8 +15,8 @@ part 'components/home_voting_button_component.dart';
 part 'components/home_error_message_component.dart';
 part 'components/home_total_voting_count_component.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomePageFamily extends StatelessWidget {
+  const HomePageFamily({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,4 +1,4 @@
-part of '../home_page.dart';
+part of '../home_page_family.dart';
 
 class HomeLoadingComponent extends StatelessWidget {
   const HomeLoadingComponent({super.key});

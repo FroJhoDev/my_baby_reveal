@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'core/styles/app_theme.dart';
 import 'core/providers/app_providers.dart';
 
-import 'features/voting/pages/home_page/home_page.dart';
+import 'features/voting/pages/home_page_family/home_page_family.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'My Baby Reveal',
         theme: AppTheme.themeData,
-        home: const HomePage(),
+        home: const HomePageFamily(),
       ),
     );
   }

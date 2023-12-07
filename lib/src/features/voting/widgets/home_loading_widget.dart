@@ -1,7 +1,9 @@
-part of '../home_page_family.dart';
+import 'package:lottie/lottie.dart';
+import 'package:flutter/material.dart';
+import 'package:my_baby_reveal/src/core/extensions/size_extension.dart';
 
-class HomeLoadingComponent extends StatelessWidget {
-  const HomeLoadingComponent({super.key});
+class HomeLoadingWidget extends StatelessWidget {
+  const HomeLoadingWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,7 @@
-part of '../home_page_family.dart';
+import 'package:flutter/material.dart';
 
-class HomeErrorMessageComponent extends StatelessWidget {
-  const HomeErrorMessageComponent({super.key});
+class HomeErrorMessageWidget extends StatelessWidget {
+  const HomeErrorMessageWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

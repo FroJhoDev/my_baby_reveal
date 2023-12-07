@@ -1,7 +1,8 @@
-part of '../home_page_family.dart';
+import 'package:flutter/material.dart';
+import 'package:my_baby_reveal/src/core/extensions/size_extension.dart';
 
-class HomeBottomBarComponent extends StatelessWidget {
-  const HomeBottomBarComponent({super.key});
+class HomeBottomBarWidget extends StatelessWidget {
+  const HomeBottomBarWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

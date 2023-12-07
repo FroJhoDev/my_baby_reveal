@@ -1,10 +1,11 @@
-part of '../home_page_family.dart';
+import 'package:flutter/material.dart';
+import 'package:animated_flip_counter/animated_flip_counter.dart';
 
-class HomeTotalVotingCountComponent extends StatelessWidget {
+class HomeTotalVotingCountWidget extends StatelessWidget {
 
   final num totalVotes;
 
-  const HomeTotalVotingCountComponent({
+  const HomeTotalVotingCountWidget({
     super.key,
     required this.totalVotes,
   });

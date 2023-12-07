@@ -3,7 +3,7 @@
 ![Flutter Version](https://img.shields.io/static/v1?label=flutter&message=3.16.0&color=42a5f5)
 ![Null Safety](https://img.shields.io/static/v1?label=null-safety&message=done&color=success)
 
-# **♂️♀️ My Baby Reveal**
+# **🍼 My Baby Reveal**
 
 ## ✅ Introdução
 

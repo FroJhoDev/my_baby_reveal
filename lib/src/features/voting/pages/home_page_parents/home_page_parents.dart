@@ -11,6 +11,7 @@ import '../../widgets/home_bottom_bar_widget.dart';
 import '../../widgets/home_error_message_widget.dart';
 import '../../widgets/home_total_voting_count_widget.dart';
 import '../../widgets/voting_thermometer/voting_thermometer_widget.dart';
+
 import 'components/home_voting_gender_count_component.dart';
 
 class HomePageParents extends StatelessWidget {

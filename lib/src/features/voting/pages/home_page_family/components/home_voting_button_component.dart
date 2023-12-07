@@ -1,4 +1,4 @@
-part of '../home_page_family.dart';
+import 'package:flutter/material.dart';
 
 class HomeVotingButtonComponent extends StatelessWidget {
 

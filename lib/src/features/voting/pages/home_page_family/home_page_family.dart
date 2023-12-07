@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:my_baby_reveal/src/core/extensions/size_extension.dart';
 
-import 'package:my_baby_reveal/src/features/voting/providers/voting_provider.dart';
+import '../../providers/voting_provider.dart';
 import '../../model/voting_information_model.dart';
 
 import '../../widgets/home_loading_widget.dart';
@@ -12,7 +12,7 @@ import '../../widgets/home_error_message_widget.dart';
 import '../../widgets/home_total_voting_count_widget.dart';
 import '../../widgets/voting_thermometer/voting_thermometer_widget.dart';
 
-part 'components/home_voting_button_component.dart';
+import 'components/home_voting_button_component.dart';
 
 class HomePageFamily extends StatelessWidget {
   const HomePageFamily({super.key});

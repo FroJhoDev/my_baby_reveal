@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "MyBabyRevealFamily",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_family.dart",
+            "args": ["--flavor", "my_baby_reveal", "--target", "lib/main_family.dart"]
+        },
+        {
+            "name": "MyBabyRevealParents",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_parents.dart",
+            "args": ["--flavor", "my_baby_reveal_parents", "--target", "lib/main_parents.dart"]
+        },
+        {
+            "name": "MyBabyRevealFamily (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "MyBabyRevealFamily (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

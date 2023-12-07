@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "731426910051",
+    "project_id": "my-baby-reveal",
+    "storage_bucket": "my-baby-reveal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731426910051:android:ede4b77cc6236e2f4a2d56",
+        "android_client_info": {
+          "package_name": "com.example.my_baby_reveal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkk7iV0oAajz04IJoWsRIG7_HKWuh0_lU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

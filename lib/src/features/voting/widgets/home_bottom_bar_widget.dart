@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:my_baby_reveal/src/core/extensions/size_extension.dart';
 
 class HomeBottomBarWidget extends StatelessWidget {
-  const HomeBottomBarWidget({super.key});
+  final double percentWidth;
+
+  const HomeBottomBarWidget({super.key, required this.percentWidth});
 
   @override
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
+        width: context.percentWidth(percentWidth),
         height: context.percentHeight(0.10),
         decoration: const BoxDecoration(
           color: Colors.white,

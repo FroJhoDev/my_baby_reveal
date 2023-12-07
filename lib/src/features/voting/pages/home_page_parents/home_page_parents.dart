@@ -43,13 +43,14 @@ class HomePageParents extends StatelessWidget {
                   children: [
                     HomeTotalVotingCountWidget(totalVotes: votingInformation.totalVotes),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         VotingThermometerWidget(
                           voteCount: votingInformation.boyVotingPercent,
                           babyName: votingInformation.boyName,
                           isBoy: true,
                         ),
+                        const SizedBox(width: 30.0),
                         VotingThermometerWidget(
                           voteCount: votingInformation.girlVotingPercent,
                           babyName: votingInformation.girlName,
@@ -68,7 +69,7 @@ class HomePageParents extends StatelessWidget {
               height: context.percentHeight(0.15),
               child: const Stack(
                 children: [
-                  HomeBottomBarWidget(),
+                  HomeBottomBarWidget(percentWidth: 0.5),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [

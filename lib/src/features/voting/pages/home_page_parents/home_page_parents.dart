@@ -21,22 +21,23 @@ class HomePageParents extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blueGrey.shade100,
-      body: Stack(
-        children: [
-          StreamBuilder(
-            stream: context.read<VotingProvider>().resultsStream,
-            builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-              if (snapshot.hasError) {
-                return const HomeErrorMessageWidget();
-              }
+      body: StreamBuilder(
+        stream: context.read<VotingProvider>().resultsStream,
+        builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+          if (snapshot.hasError) {
+            return const HomeErrorMessageWidget();
+          }
 
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return const HomeLoadingWidget();
-              }
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const HomeLoadingWidget();
+          }
 
-              VotingInformationModel votingInformation = VotingInformationModel.fromMap(snapshot.data!.docs.first.data()! as Map<String, dynamic>);
+          VotingInformationModel votingInformation = VotingInformationModel.fromMap(snapshot.data!.docs.first.data()! as Map<String, dynamic>);
+          
+          return Stack(
+            children: [
 
-              return Align(
+              Align(
                 alignment: Alignment.bottomCenter,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -60,28 +61,29 @@ class HomePageParents extends StatelessWidget {
                     ),
                   ],
                 ),
-              );
-            },
-          ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: SizedBox(
-              height: context.percentHeight(0.15),
-              child: const Stack(
-                children: [
-                  HomeBottomBarWidget(percentWidth: 0.5),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: SizedBox(
+                  width: context.percentWidth(0.4),
+                  height: context.percentHeight(0.15),
+                  child: Stack(
                     children: [
-                      HomeVotingGenderCountComponent(isBoy: true),
-                      HomeVotingGenderCountComponent(isBoy: false),
+                      const HomeBottomBarWidget(),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          HomeVotingGenderCountComponent(voteCount: votingInformation.boyVotes, isBoy: true),
+                          HomeVotingGenderCountComponent(voteCount: votingInformation.girlVotes, isBoy: false),
+                        ],
+                      ),
                     ],
                   ),
-                ],
-              ),
-            ),
-          )
-        ],
+                ),
+              )
+            ],
+          );
+        },
       ),
     );
   }

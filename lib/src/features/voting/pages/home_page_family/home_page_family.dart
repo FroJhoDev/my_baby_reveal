@@ -68,7 +68,7 @@ class HomePageFamily extends StatelessWidget {
               height: context.percentHeight(0.15),
               child: Stack(
                 children: [
-                  const HomeBottomBarWidget(percentWidth: 1.0),
+                  const HomeBottomBarWidget(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [

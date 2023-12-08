@@ -75,7 +75,7 @@ class HomePageParents extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           HomeVotingGenderCountComponent(voteCount: votingInformation.boyVotes, isBoy: true),
-                          const SizedBox(width: 110.0),
+                          SizedBox(width: context.percentWidth(0.08)),
                           HomeVotingGenderCountComponent(voteCount: votingInformation.girlVotes, isBoy: false),
                         ],
                       ),

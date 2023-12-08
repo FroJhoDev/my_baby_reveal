@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:my_baby_reveal/src/core/extensions/size_extension.dart';
 
+import '../../../revelation/pages/revelation_page.dart';
 import '../../providers/voting_provider.dart';
 import '../../model/voting_information_model.dart';
 
@@ -87,7 +88,20 @@ class HomePageParents extends StatelessWidget {
                 right: 20.0,
                 bottom: 20.0,
                 child: FilledButton(
-                  onPressed: (){}, 
+                  onPressed: (){
+                    showDialog(context: context, builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: const Text('Tem Certeza Que Deseja Revelar Agora?'),
+                        actions: [
+                          TextButton(onPressed: () => Navigator.pop(context), child: const Text('Não, agora não')),
+                          TextButton(
+                            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => RevelationPage(babyGender: votingInformation.babyGender,),),), 
+                            child: const Text('Sim, REVELAR agora'),
+                          ),
+                        ],
+                      );
+                    });
+                  }, 
                   style: FilledButton.styleFrom(
                     padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0)
                   ),

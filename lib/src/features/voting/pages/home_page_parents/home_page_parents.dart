@@ -62,6 +62,7 @@ class HomePageParents extends StatelessWidget {
                   ],
                 ),
               ),
+
               Align(
                 alignment: Alignment.bottomCenter,
                 child: SizedBox(
@@ -81,6 +82,17 @@ class HomePageParents extends StatelessWidget {
                     ],
                   ),
                 ),
+              ),
+              Positioned(
+                right: 20.0,
+                bottom: 20.0,
+                child: FilledButton(
+                  onPressed: (){}, 
+                  style: FilledButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20.0)
+                  ),
+                  child: const Text('Revelar?', style: TextStyle(fontSize: 18.0,),),
+                )
               )
             ],
           );

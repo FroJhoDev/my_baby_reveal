@@ -1,9 +1,16 @@
-import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+
 import 'package:my_baby_reveal/src/core/extensions/size_extension.dart';
 
 class HomeLoadingWidget extends StatelessWidget {
-  const HomeLoadingWidget({super.key});
+
+  final double animationWidth;
+
+  const HomeLoadingWidget({
+    super.key,
+    required this.animationWidth,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +20,7 @@ class HomeLoadingWidget extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Lottie.asset('assets/lottie/baby_sleeping_animation.json'),
+            Lottie.asset('assets/lottie/baby_sleeping_animation.json', width: animationWidth),
             Text(
               'Aguarde...',
               style: TextStyle(

@@ -30,7 +30,7 @@ class HomePageParents extends StatelessWidget {
           }
 
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const HomeLoadingWidget();
+            return HomeLoadingWidget(animationWidth: context.percentWidth(0.2),);
           }
 
           VotingInformationModel votingInformation = VotingInformationModel.fromMap(snapshot.data!.docs.first.data()! as Map<String, dynamic>);
@@ -52,7 +52,7 @@ class HomePageParents extends StatelessWidget {
                           babyName: votingInformation.boyName,
                           isBoy: true,
                         ),
-                        const SizedBox(width: 30.0),
+                        SizedBox(width: context.percentWidth(0.008)),
                         VotingThermometerWidget(
                           voteCount: votingInformation.girlVotingPercent,
                           babyName: votingInformation.girlName,
@@ -67,7 +67,7 @@ class HomePageParents extends StatelessWidget {
               Align(
                 alignment: Alignment.bottomCenter,
                 child: SizedBox(
-                  width: context.percentWidth(0.4),
+                  width: context.percentWidth(context.screenWidth > 1040 ? 0.4 : 0.6),
                   height: context.percentHeight(0.15),
                   child: Stack(
                     children: [

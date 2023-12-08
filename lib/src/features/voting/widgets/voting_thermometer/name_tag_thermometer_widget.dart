@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_baby_reveal/src/core/extensions/size_extension.dart';
 
 class NameTagThermometerWidget extends StatelessWidget {
 
@@ -27,14 +28,12 @@ class NameTagThermometerWidget extends StatelessWidget {
                 (string) => Text(
                   string,
                   style: TextStyle(
-                    // color: isBoy ? Colors.blue.shade50 : Colors.pink.shade50,
-                    fontSize: 40.0,
+                    fontSize: context.screenHeight > 650 ? 40.0 : 28.0,
                     fontFamily: 'LilitaOne',
                     foreground: Paint()
                       ..style = PaintingStyle.stroke
                       ..strokeWidth = 2
-                      ..color =
-                          isBoy ? Colors.blue.shade100 : Colors.pink.shade100,
+                      ..color = isBoy ? Colors.blue.shade100 : Colors.pink.shade100,
                   ),
                 ),
               )
@@ -53,7 +52,7 @@ class NameTagThermometerWidget extends StatelessWidget {
                   string,
                   style: TextStyle(
                       color: isBoy ? Colors.blue.shade50 : Colors.pink.shade50,
-                      fontSize: 40.0,
+                      fontSize: context.screenHeight > 650 ? 40.0 : 28.0,
                       fontFamily: 'LilitaOne'),
                 ),
               )

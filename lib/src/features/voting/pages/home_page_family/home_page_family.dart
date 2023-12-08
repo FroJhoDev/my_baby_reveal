@@ -31,7 +31,7 @@ class HomePageFamily extends StatelessWidget {
               }
 
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return const HomeLoadingWidget();
+                return HomeLoadingWidget(animationWidth: context.percentWidth(0.9),);
               }
 
               VotingInformationModel votingInformation = VotingInformationModel.fromMap(snapshot.data!.docs.first.data()! as Map<String, dynamic>);

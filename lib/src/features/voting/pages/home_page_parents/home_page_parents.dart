@@ -71,9 +71,10 @@ class HomePageParents extends StatelessWidget {
                     children: [
                       const HomeBottomBarWidget(),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           HomeVotingGenderCountComponent(voteCount: votingInformation.boyVotes, isBoy: true),
+                          const SizedBox(width: 110.0),
                           HomeVotingGenderCountComponent(voteCount: votingInformation.girlVotes, isBoy: false),
                         ],
                       ),

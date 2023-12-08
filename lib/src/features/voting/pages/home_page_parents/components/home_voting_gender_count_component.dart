@@ -1,3 +1,4 @@
+import 'package:animated_flip_counter/animated_flip_counter.dart';
 import 'package:flutter/material.dart';
 
 class HomeVotingGenderCountComponent extends StatelessWidget {
@@ -13,14 +14,15 @@ class HomeVotingGenderCountComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 15.0),
+      padding: const EdgeInsets.symmetric(horizontal: 30.0),
       decoration: BoxDecoration(
           color: isBoy ? Colors.blue.shade500 : Colors.pink.shade500,
           borderRadius: BorderRadius.circular(50.0),
           border: Border.all(color: Colors.white, width: 8.0)),
-      child: Text(
-        voteCount.toString(),
-        style: const TextStyle(
+      child: AnimatedFlipCounter(
+        duration: const Duration(milliseconds: 250),
+        value: voteCount,
+        textStyle: const TextStyle(
           color: Colors.white,
           fontSize: 24.0,
         ),

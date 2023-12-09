@@ -41,6 +41,7 @@ dependencies:
   lottie: ^2.7.0
   animated_flip_counter: ^0.2.6
   provider: ^6.1.1
+  circular_countdown_timer: ^0.2.3
 
 dev_dependencies:
   flutter_test:

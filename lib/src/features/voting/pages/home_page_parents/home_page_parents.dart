@@ -97,7 +97,7 @@ class HomePageParents extends StatelessWidget {
                           TextButton(
                             onPressed: () {
                                 Navigator.pop(context);
-                                Navigator.push(context, MaterialPageRoute(builder: (context) => RevelationPage(babyGender: votingInformation.babyGender,),),);
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => RevelationPage(votingInformation: votingInformation,),),);
                               }, 
                             child: const Text('Sim, REVELAR agora'),
                           ),

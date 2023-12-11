@@ -16,7 +16,7 @@ import '../../widgets/voting_thermometer/voting_thermometer_widget.dart';
 import 'components/home_voting_gender_count_component.dart';
 
 class HomePageParents extends StatefulWidget {
-  HomePageParents({super.key});
+  const HomePageParents({super.key});
 
   @override
   State<HomePageParents> createState() => _HomePageParentsState();

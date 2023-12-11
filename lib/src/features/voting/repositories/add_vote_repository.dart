@@ -10,7 +10,9 @@ class AddVoteRepository {
   Future<void> increaseVoteCount({required bool isBoyVote}) async {
 
     final String fieldVoted = isBoyVote ? 'boy_votes' : 'girl_votes';
-    await firebaseFirestore.collection('vote_results').doc('total_results').update({fieldVoted: FieldValue.increment(1)});
+    final String lastVote = isBoyVote ? 'boy' : 'girl';
+    
+    await firebaseFirestore.collection('vote_results').doc('total_results').update({fieldVoted: FieldValue.increment(1), 'last_vote': lastVote});
 
   }
 

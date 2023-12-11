@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:my_baby_reveal/src/core/extensions/size_extension.dart';
 
-import '../../../revelation/pages/revelation_page.dart';
 import '../../providers/voting_provider.dart';
 import '../../model/voting_information_model.dart';
+import '../../../revelation/pages/revelation_page.dart';
 
 import '../../widgets/home_loading_widget.dart';
 import '../../widgets/home_bottom_bar_widget.dart';
@@ -15,8 +16,18 @@ import '../../widgets/voting_thermometer/voting_thermometer_widget.dart';
 
 import 'components/home_voting_gender_count_component.dart';
 
-class HomePageParents extends StatelessWidget {
-  const HomePageParents({super.key});
+class HomePageParents extends StatefulWidget {
+  HomePageParents({super.key});
+
+  @override
+  State<HomePageParents> createState() => _HomePageParentsState();
+}
+
+class _HomePageParentsState extends State<HomePageParents> with TickerProviderStateMixin {
+  ValueNotifier<bool> animation = ValueNotifier(false);
+
+  late final AnimationController _animationControllerBoy = AnimationController(vsync: this, duration: const Duration(seconds: 2));
+  late final AnimationController _animationControllerGirl = AnimationController(vsync: this, duration: const Duration(seconds: 2));
 
   @override
   Widget build(BuildContext context) {
@@ -34,10 +45,16 @@ class HomePageParents extends StatelessWidget {
           }
 
           VotingInformationModel votingInformation = VotingInformationModel.fromMap(snapshot.data!.docs.first.data()! as Map<String, dynamic>);
-          
+
+          if (votingInformation.lastVote == 'boy') {
+            _animationControllerBoy.reset();
+            _animationControllerBoy.forward();            
+          } else {
+            _animationControllerGirl.reset();
+            _animationControllerGirl.forward();
+          }
           return Stack(
             children: [
-
               Align(
                 alignment: Alignment.bottomCenter,
                 child: Column(
@@ -48,12 +65,14 @@ class HomePageParents extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         VotingThermometerWidget(
+                          animationController: _animationControllerBoy,
                           voteCount: votingInformation.boyVotingPercent,
                           babyName: votingInformation.boyName,
                           isBoy: true,
                         ),
                         SizedBox(width: context.percentWidth(0.008)),
                         VotingThermometerWidget(
+                          animationController: _animationControllerGirl,
                           voteCount: votingInformation.girlVotingPercent,
                           babyName: votingInformation.girlName,
                           isBoy: false,
@@ -116,5 +135,12 @@ class HomePageParents extends StatelessWidget {
         },
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    _animationControllerBoy.dispose();
+    _animationControllerGirl.dispose();
+    super.dispose();
   }
 }

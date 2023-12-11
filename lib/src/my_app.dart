@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         theme: AppTheme.themeData,
         home: FlavorConfig.shared.flavor == FlavorProducts.family
             ? const HomePageFamily()
-            : const HomePageParents(),
+            : HomePageParents(),
       ),
     );
   }

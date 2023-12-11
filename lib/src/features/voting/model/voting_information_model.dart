@@ -6,6 +6,8 @@ class VotingInformationModel {
   final String boyName;
   final String girlName;
   final int babyGender;
+  final bool wasRevealed;
+  final String lastVote;
 
   VotingInformationModel({
     required this.boyVotes,
@@ -13,6 +15,9 @@ class VotingInformationModel {
     required this.boyName,
     required this.girlName,
     required this.babyGender,
+    required this.wasRevealed,
+    required this.lastVote,
+
   });
 
   Map<String, dynamic> toMap() {
@@ -22,6 +27,8 @@ class VotingInformationModel {
       'boyName': boyName,
       'girlName': girlName,
       'babyGender': babyGender,
+      'wasRevealed': wasRevealed,
+      'lastVote': lastVote,
     };
   }
 
@@ -32,6 +39,8 @@ class VotingInformationModel {
       boyName: map['boy_name'] as String,
       girlName: map['girl_name'] as String,
       babyGender: map['baby_gender'] as int,
+      wasRevealed: map['was_revealed'] as bool,
+      lastVote: map['last_vote'] as String,
     );
   }
 
@@ -41,7 +50,7 @@ class VotingInformationModel {
 
   @override
   String toString() {
-    return 'VotingInformationModel(boyVotes: $boyVotes, girlVotes: $girlVotes, boyName: $boyName, girlName: $girlName, babyGender: $babyGender)';
+    return 'VotingInformationModel(boyVotes: $boyVotes, girlVotes: $girlVotes, boyName: $boyName, girlName: $girlName, babyGender: $babyGender, wasRevealed: $wasRevealed, lastVote: $lastVote)';
   }
 
   num get totalVotes => boyVotes + girlVotes;

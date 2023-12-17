@@ -21,8 +21,8 @@
 ### Screenshots
 
 <p align="middle">
-    <img src="https://github.com/FroJhoDev/my_baby_reveal/blob/main/my_baby_reveal_parents_app_frojhodev.gif" width="69%">
-    <img src="https://github.com/FroJhoDev/my_baby_reveal/blob/main/my_baby_reveal_family_app_frojhodev.gif" width="29%">
+    <img src="https://github.com/FroJhoDev/my_baby_reveal/blob/main/my_baby_reveal_parents_app_frojhodev.gif" width="64%">
+    <img src="https://github.com/FroJhoDev/my_baby_reveal/blob/main/my_baby_reveal_family_app_frojhodev.gif" width="34%">
 </p>
 
 ## 🚀 Configurando para Utilizar

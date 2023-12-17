@@ -21,7 +21,8 @@
 ### Screenshots
 
 <p align="middle">
-    <img src="#" width="20%">
+    <img src="https://github.com/FroJhoDev/my_baby_reveal/blob/main/my_baby_reveal_parents_app_frojhodev.gif" width="59%">
+    <img src="https://github.com/FroJhoDev/my_baby_reveal/blob/main/my_baby_reveal_family_app_frojhodev.gif" width="39%">
 </p>
 
 ## 🚀 Configurando para Utilizar
@@ -43,7 +44,7 @@ Caso você não possua o Flutter instalado a [Documentação Oficial](https://do
 Atraves do terminal, faça o clone do repositorio em uma pasta usando o comando:
 
 ```
-git clone https://github.com/jonathan1313/my_baby_reveal.git
+git clone https://github.com/FroJhoDev/my_baby_reveal.git
 ```
 Acesse a pasta com o comando:
 
